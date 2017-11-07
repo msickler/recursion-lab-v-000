@@ -36,3 +36,16 @@ function addUpTo(myArray, index) {
      return myArray[index]
    }
  }
+
+function maxOf(array) {
+  if (array.length > 1) {
+  	if (array[1] > array[0]) {
+  		return maxOf(array.slice(1,array.length))
+  	} else {
+  		array[1] = array[0]
+  		return maxOf(array.slice(1,array.length))
+  	}
+  } else {
+  	return array[0]
+  }
+}
