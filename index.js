@@ -18,6 +18,13 @@ function reverseString(myString) {
    }
  }
 
-function isPalindrome() {
-  
+function isPalindrome(myString) {
+  let n = myString.length;
+  if (n < 2) {
+   return true;
+  } else if (myString[n - 1] === myString[0]) {
+   return isPalindrome(myString.substring(1, n - 1));
+  } else {
+   return false;
+  }
 }
