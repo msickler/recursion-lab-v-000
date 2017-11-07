@@ -33,6 +33,6 @@ function addUpTo(myArray, index) {
    if(index > 0){
      return addUpTo(myArray, index-1) + myArray[index]
    } else {
-     return myArray
+     return myArray[index]
    }
  }
